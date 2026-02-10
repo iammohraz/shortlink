@@ -1,0 +1,29 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%- include("./components/head.ejs"); -%>
+    <title><%= appname %> - Redirecting...</title>
+  </head>
+  <body>
+    <div class="container d-flex justify-content-center">
+      <div
+        style="margin-top: 50px; width: 400px"
+        class="bg-light border rounded-4 p-3 text-center"
+      >
+        <h1 class="mb-2">Redirecting...</h1>
+        <div class="spinner-border text-dark mb-4" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <p class="lead" id="redurl"><%= link %></p>
+      </div>
+    </div>
+    <script>
+      setTimeout(function () {
+        var url = document.getElementById("redurl");
+        window.location.replace(url.textContent);
+      }, 4000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+{
+    "port":"PORT",
+    "domain":"LIARA_URL",
+    "sessionSecret":"SESSION_SECRET",
+    "cookieSecret":"COOKIE_SECRET",
+    "dbConfig":{
+        "address":"DATABASE_URL"
+    }
+}

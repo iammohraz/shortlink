@@ -1,0 +1,29 @@
+{
+  "name": "shortlink",
+  "version": "1.0.0",
+  "description": "ShortLink is a shortlink service created with Node.js and MongoDB.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Mohammad Razavi",
+  "license": "ISC",
+  "dependencies": {
+    "auto-bind": "^4.0.0",
+    "bootstrap": "^5.2.2",
+    "config": "^3.3.8",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "express-validator": "^6.14.2",
+    "mongoose": "^6.7.2",
+    "morgan": "^1.10.0",
+    "nanoid": "^3.0.0",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

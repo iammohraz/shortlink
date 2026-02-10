@@ -1,0 +1,50 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%- include("./components/head.ejs"); -%>
+    <title><%= appname %> - Analyze</title>
+  </head>
+  <body>
+    <%- include("./components/navbar.ejs"); -%>
+    <div>
+      <div class="container d-flex justify-content-center">
+        <div style="margin-top: 60px; width: 800px" class="text-center">
+          <div class="d-flex justify-content-center">
+            <div>
+              <h1>Analyze Your Link!</h1>
+              <hr />
+            </div>
+          </div>
+          <form method="post" action="/analyze">
+            <input
+              class="form-control form-control-lg rounded-4 mb-2"
+              type="text"
+              name="link"
+              placeholder="https://example.com/"
+            />
+            <button class="btn btn-primary btn-lg rounded-4" type="submit">
+              Analyze
+            </button>
+          </form>
+          <% if (errors.length > 0) {%>
+          <div class="alert alert-danger border-danger text-start rounded-4">
+            <ul class="m-0">
+              <% errors.forEach((error)=>{ %>
+              <li><%= error.msg %></li>
+              <% }) %>
+            </ul>
+          </div>
+          <% } %> <% if (views.length > 0 && date.length > 0) {%>
+          <div class="bg-light border p-3 border-primary rounded-4">
+            <h3>Analyze:</h3>
+            <p class="lead">Views: <%= views %></p>
+            <p class="lead">Created At: <%= date %></p>
+          </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
